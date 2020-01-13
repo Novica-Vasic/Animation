@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 200px 400px;
+            background-color: #050210;
+        }
+       
+        #first{
+            width: 350PX;
+            height: 350px;
+            position: relative;
+            left: 0;
+            right: 0;
+            background: linear-gradient(#e33e44, #fa23ea, #bcce11);
+            border-radius: 100%;
+            animation-name: animation-1;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        @keyframes animation-1{
+            0%{
+                transform: rotate(0 deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        #first::before{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            content: '';
+            left: 0;
+            right: 0;
+            background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+            border-radius: 100%;
+            filter: blur(40px);
+        }
+        #first::before{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            content: '';
+            left: 0;
+            right: 0;
+            background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+            border-radius: 100%;
+            filter: blur(80px);
+        }
+        #second{
+            width: 320px;
+            height: 320px;
+            position: relative;
+            left: 0;
+            right: 0;
+            border-radius: 100%;
+            background-color: #050210;
+            transform: translate(15px, -335px);
+        }
+        #second::before{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            content: '';
+            border-radius: 100%;
+            animation-name: animation-2;
+            background-color: #2a1c41;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        
+        @keyframes animation-2{
+            0%{
+                transform: scale(0, 0);
+            }
+            100%{
+                transform: scale(1, 1)
+            }
+        }
+        
+
+        
+    </style>
+
+</head>
+<body>
+    <div id="first"></div>  
+    <div id="second"></div>
+    
+
+    
+        
+    
+    
+</body>
+</html>
